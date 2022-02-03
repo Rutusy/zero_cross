@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+body {
+  background: url("/bg.jpg");
+  background-size: cover;
+}
+.field-full {
+  display: grid;
+  background-color: #ffffff5d;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 80vw;
+  height: 80vw;
+  gap: 1px;
+  margin: 3em auto;
+}
+.field {
+  background-color: #dedfdffc;
+  position: relative;
+}
+.cross {
+}
+.cross:after,
+.cross:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 0.4em;
+  background: #767676;
+  left: 10%;
+  top: 50%;
+}
+
+.cross:after {
+  transform: rotate(45deg);
+}
+.cross:before {
+  transform: rotate(-45deg);
+}
+.zero {
+  position: absolute;
+  width: 76%;
+  height: 76%;
+  border: 0.4em solid #767676;
+  border-radius: 50%;
+  left: 12%;
+  top: 12%;
+  box-sizing: border-box;
+}
+
+.control {
+width: 80vw;
+max-width: 300px;
+background-color: #ffffff5d;
+backdrop-filter: blur(4px);
+padding: 1em;
+position: relative;
+display: flex;
+margin: auto;
+justify-content: space-between;
+border-radius: 0.2em;
+}
+.ctrl-buttons {
+  padding: 0.2em 1.2em;
+  text-transform: uppercase;
+}
+#win {
+  background: #9fe4f55d;
+  width: 80vw;
+  max-width: 300px;
+  padding: 1em;
+  margin: auto;
+  text-align: center;
+  display: none;
+  backdrop-filter: blur(4px);
+}
